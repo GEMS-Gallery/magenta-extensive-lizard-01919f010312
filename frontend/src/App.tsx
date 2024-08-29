@@ -55,8 +55,8 @@ const App: React.FC = () => {
 
   return (
     <Container maxWidth="lg">
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h1" gutterBottom>
+      <Box sx={{ my: 4 }} className="retro-container">
+        <Typography variant="h4" component="h1" gutterBottom className="retro-header">
           TaxPayer Management System
         </Typography>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 4 }}>
@@ -64,7 +64,7 @@ const App: React.FC = () => {
           <TaxPayerSearch />
         </Box>
         {loading ? (
-          <CircularProgress />
+          <CircularProgress sx={{ color: '#33FF33' }} />
         ) : (
           <TaxPayerList taxPayers={taxPayers} />
         )}

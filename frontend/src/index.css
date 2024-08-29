@@ -1,11 +1,61 @@
-@import '@fontsource/roboto/300.css';
-@import '@fontsource/roboto/400.css';
-@import '@fontsource/roboto/500.css';
-@import '@fontsource/roboto/700.css';
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
+  font-family: 'VT323', monospace;
+  -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
+  color: #33FF33;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.retro-container {
+  border: 2px solid #33FF33;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 5px 5px 0px #33FF33;
+}
+
+.retro-header {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #FFFF00;
+  text-shadow: 2px 2px #FF00FF;
+  margin-bottom: 20px;
+}
+
+.retro-button {
+  background-color: #4CAF50;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.retro-button:hover {
+  background-color: #FFFF00;
+  color: #000000;
+  box-shadow: 3px 3px 0px #FF00FF;
+}
+
+.retro-input {
+  background-color: #000000;
+  color: #33FF33;
+  border: 2px solid #33FF33;
+  padding: 10px;
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+}
+
+.retro-input:focus {
+  outline: none;
+  border-color: #FFFF00;
+  box-shadow: 0 0 5px #FFFF00;
 }

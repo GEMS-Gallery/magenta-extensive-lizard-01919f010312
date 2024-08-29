@@ -36,6 +36,45 @@ const columns: TableColumn<TaxPayer>[] = [
   },
 ];
 
+const customStyles = {
+  table: {
+    style: {
+      backgroundColor: '#000000',
+      color: '#33FF33',
+      border: '2px solid #33FF33',
+    },
+  },
+  rows: {
+    style: {
+      backgroundColor: '#000000',
+      color: '#33FF33',
+      '&:hover': {
+        backgroundColor: '#1E1E1E',
+      },
+    },
+  },
+  headRow: {
+    style: {
+      backgroundColor: '#1E1E1E',
+      color: '#FFFF00',
+    },
+  },
+  pagination: {
+    style: {
+      backgroundColor: '#000000',
+      color: '#33FF33',
+    },
+    pageButtonsStyle: {
+      backgroundColor: '#1E1E1E',
+      color: '#33FF33',
+      '&:hover': {
+        backgroundColor: '#4CAF50',
+        color: '#000000',
+      },
+    },
+  },
+};
+
 const TaxPayerList: React.FC<TaxPayerListProps> = ({ taxPayers }) => {
   return (
     <DataTable
@@ -46,6 +85,7 @@ const TaxPayerList: React.FC<TaxPayerListProps> = ({ taxPayers }) => {
       responsive
       highlightOnHover
       striped
+      customStyles={customStyles}
     />
   );
 };

@@ -36,7 +36,7 @@ const TaxPayerSearch: React.FC = () => {
   };
 
   return (
-    <Box sx={{ width: '300px' }}>
+    <Box sx={{ width: '300px' }} className="retro-container">
       <TextField
         label="Search by TID"
         variant="outlined"
@@ -44,6 +44,7 @@ const TaxPayerSearch: React.FC = () => {
         onChange={(e) => setTid(e.target.value)}
         fullWidth
         sx={{ mb: 2 }}
+        className="retro-input"
       />
       <Button
         variant="contained"
@@ -51,20 +52,21 @@ const TaxPayerSearch: React.FC = () => {
         onClick={handleSearch}
         disabled={loading}
         fullWidth
+        className="retro-button"
       >
-        {loading ? <CircularProgress size={24} /> : 'Search'}
+        {loading ? <CircularProgress size={24} sx={{ color: '#000000' }} /> : 'Search'}
       </Button>
       {error && (
-        <Typography color="error" sx={{ mt: 2 }}>
+        <Typography color="error" sx={{ mt: 2, color: '#FF0000' }}>
           {error}
         </Typography>
       )}
       {searchResult && (
         <Box sx={{ mt: 2 }}>
-          <Typography variant="h6">Search Result:</Typography>
-          <Typography>TID: {searchResult.tid.toString()}</Typography>
-          <Typography>Name: {searchResult.firstName} {searchResult.lastName}</Typography>
-          <Typography>Address: {searchResult.address}</Typography>
+          <Typography variant="h6" sx={{ color: '#FFFF00' }}>Search Result:</Typography>
+          <Typography sx={{ color: '#33FF33' }}>TID: {searchResult.tid.toString()}</Typography>
+          <Typography sx={{ color: '#33FF33' }}>Name: {searchResult.firstName} {searchResult.lastName}</Typography>
+          <Typography sx={{ color: '#33FF33' }}>Address: {searchResult.address}</Typography>
         </Box>
       )}
     </Box>

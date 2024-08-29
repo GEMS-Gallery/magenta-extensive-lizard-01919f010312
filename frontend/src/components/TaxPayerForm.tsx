@@ -35,6 +35,7 @@ const TaxPayerForm: React.FC<TaxPayerFormProps> = ({ onSubmit }) => {
               variant="outlined"
               error={!!error}
               helperText={error?.message}
+              className="retro-input"
             />
           )}
         />
@@ -50,6 +51,7 @@ const TaxPayerForm: React.FC<TaxPayerFormProps> = ({ onSubmit }) => {
               variant="outlined"
               error={!!error}
               helperText={error?.message}
+              className="retro-input"
             />
           )}
         />
@@ -65,10 +67,11 @@ const TaxPayerForm: React.FC<TaxPayerFormProps> = ({ onSubmit }) => {
               variant="outlined"
               error={!!error}
               helperText={error?.message}
+              className="retro-input"
             />
           )}
         />
-        <Button type="submit" variant="contained" color="primary">
+        <Button type="submit" variant="contained" color="primary" className="retro-button">
           Add TaxPayer
         </Button>
       </Box>

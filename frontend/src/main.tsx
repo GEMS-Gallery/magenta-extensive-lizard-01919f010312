@@ -8,13 +8,46 @@ import CssBaseline from '@mui/material/CssBaseline';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#3498db',
+      main: '#4CAF50',
     },
     secondary: {
-      main: '#2ecc71',
+      main: '#FFA000',
     },
     background: {
-      default: '#ecf0f1',
+      default: '#000000',
+      paper: '#1E1E1E',
+    },
+    text: {
+      primary: '#33FF33',
+      secondary: '#FFFF00',
+    },
+  },
+  typography: {
+    fontFamily: '"VT323", monospace',
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 0,
+          boxShadow: '3px 3px 0px rgba(255, 255, 255, 0.5)',
+        },
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          '& .MuiOutlinedInput-root': {
+            borderRadius: 0,
+            '& fieldset': {
+              borderColor: '#33FF33',
+            },
+            '&:hover fieldset': {
+              borderColor: '#FFFF00',
+            },
+          },
+        },
+      },
     },
   },
 });
